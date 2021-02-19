@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Java 在线工具</title>
+	<link rel="stylesheet" id="wpProQuiz_front_style-css" href="./resources/wpProQuiz_front.min.css" type="text/css"
+		media="all">
+	<link rel="canonical" href="javascript:void(0);">
+	<meta name="keywords" content="Java 在线工具">
+	<meta name="description" content="在编辑器上输入简单的 Java 代码，可在线编译运行。..">
+
+	<link rel="stylesheet" href="./resources/codemirror.min.css">
+	<link href="./resources/normalize.min.css" rel="stylesheet">
+	<!-- Bootstrap Core CSS -->
+	<!-- <link href="./resources/bootstrap.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="./resources/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<link href="./resources/modern-business.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="./resources/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- PHP 代码 -->
+	<link rel="stylesheet" href="./resources/style.css">
+
+
+
+</head>
+
+<body>
+	<!-- 打赏 end -->
+	<div class="container">
+		<style>
+			.CodeMirror {
+				height: 374px;
+			}
+		</style>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div id="compiler" class="panel-heading">
+						<form class="form-inline" role="form">
+							<button type="button" class="btn btn-success" id="submitBTN" disabled="disabled"><i
+									class="fa fa-send-o"></i> 点击运行</button>
+							<select class="form-control" id="sel1">
+								<option value="javascript:void(0);">TypeScript 在线工具</option>
+								<option value="javascript:void(0);">Kotlin 在线工具</option>
+								<option value="javascript:void(0);">Pascal 在线工具</option>
+								<option value="javascript:void(0);">Lua 在线工具</option>
+								<option value="javascript:void(0);">Node.js 在线工具</option>
+								<option value="javascript:void(0);">Go 在线工具</option>
+								<option value="javascript:void(0);">Swift 在线工具</option>
+								<option value="javascript:void(0);">RUST 在线工具</option>
+								<option value="javascript:void(0);">Bash 在线工具</option>
+								<option value="javascript:void(0);">Perl 在线工具</option>
+								<option value="javascript:void(0);">Erlang 在线工具</option>
+								<option value="javascript:void(0);">Scala 在线工具</option>
+								<option value="javascript:void(0);">C# 在线工具</option>
+								<option value="javascript:void(0);">Ruby 在线工具</option>
+								<option value="javascript:void(0);">C++ 在线工具</option>
+								<option value="javascript:void(0);">C 在线工具</option>
+								<option selected="selected" value="javascript:void(0);">Java 在线工具</option>
+								<option value="javascript:void(0);">Python3 在线工具</option>
+								<option value="javascript:void(0);">Python 在线工具</option>
+								<option value="javascript:void(0);">PHP 在线工具</option>
+							</select>
+
+							<label class="pull-right"><strong style="font-size: 16px"><a href="#"><i
+											class="fa fa-envelope" aria-hidden="true"></i>
+										邮件反馈</a></strong></label>
+
+							<button type="button" class="btn btn-default" id="clearCode"><i class="fa fa-eraser"
+									aria-hidden="true"></i> 清空</button>
+						</form>
+					</div>
+					<div class="panel-body">
+						<form role="form" id="compiler-form">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-7">
+										<textarea class="form-control" id="code" name="code" rows="18"
+											style="display: none;">package online.java;
+	public class HelloWorld {
+    public static void main(String []args) {
+       System.out.println("Hello World!");
+    }
+}</textarea>
+										<div class="CodeMirror cm-s-default">
+											<div
+												style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 35px;">
+												<textarea autocorrect="off" autocapitalize="off" spellcheck="false"
+													tabindex="0"
+													style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>
+											</div>
+											<div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true">
+												<div style="min-width: 1px; height: 0px;"></div>
+											</div>
+											<div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true">
+												<div style="height: 100%; min-height: 1px; width: 0px;"></div>
+											</div>
+											<div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+											<div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+											<div class="CodeMirror-scroll" tabindex="-1">
+												<div class="CodeMirror-sizer"
+													style="margin-left: 30px; margin-bottom: -17px; border-right-width: 13px; min-height: 98px; min-width: 315px; padding-right: 0px; padding-bottom: 0px;">
+													<div style="position: relative; top: 0px;">
+														<div class="CodeMirror-lines" role="presentation">
+															<div role="presentation"
+																style="position: relative; outline: none;">
+																<div class="CodeMirror-measure">
+																	<pre
+																		class="prettyprint"><span>xxxxxxxxxx</span></pre>
+																</div>
+																<div class="CodeMirror-measure"></div>
+																<div style="position: relative; z-index: 1;"></div>
+																<div class="CodeMirror-cursors">
+																	<div class="CodeMirror-cursor"
+																		style="left: 4px; top: 0px; height: 18px;">
+																		&nbsp;</div>
+																</div>
+																<div class="CodeMirror-code" role="presentation"
+																	style="">
+																	<div style="position: relative;">
+																		<div class="CodeMirror-gutter-wrapper"
+																			style="left: -30px;">
+																			<div class="CodeMirror-linenumber CodeMirror-gutter-elt"
+																				style="left: 0px; width: 21px;">1</div>
+																		</div>
+																		<pre class="CodeMirror-line  prettyprint"
+																			role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span> <span class="cm-keyword">class</span> <span class="cm-def">HelloWorld</span> {</span></pre>
+																	</div>
+																	<div style="position: relative;">
+																		<div class="CodeMirror-gutter-wrapper"
+																			style="left: -30px;">
+																			<div class="CodeMirror-linenumber CodeMirror-gutter-elt"
+																				style="left: 0px; width: 21px;">2</div>
+																		</div>
+																		<pre class="CodeMirror-line  prettyprint"
+																			role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">public</span> <span class="cm-keyword">static</span> <span class="cm-type">void</span> <span class="cm-variable">main</span>(<span class="cm-type">String</span> []<span class="cm-variable">args</span>) {</span></pre>
+																	</div>
+																	<div style="position: relative;">
+																		<div class="CodeMirror-gutter-wrapper"
+																			style="left: -30px;">
+																			<div class="CodeMirror-linenumber CodeMirror-gutter-elt"
+																				style="left: 0px; width: 21px;">3</div>
+																		</div>
+																		<pre class="CodeMirror-line  prettyprint"
+																			role="presentation"><span role="presentation" style="padding-right: 0.1px;">       <span class="cm-variable">System</span>.<span class="cm-variable">out</span>.<span class="cm-variable">println</span>(<span class="cm-string">"Hello World!"</span>);</span></pre>
+																	</div>
+																	<div style="position: relative;">
+																		<div class="CodeMirror-gutter-wrapper"
+																			style="left: -30px;">
+																			<div class="CodeMirror-linenumber CodeMirror-gutter-elt"
+																				style="left: 0px; width: 21px;">4</div>
+																		</div>
+																		<pre class="CodeMirror-line  prettyprint"
+																			role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+																	</div>
+																	<div style="position: relative;">
+																		<div class="CodeMirror-gutter-wrapper"
+																			style="left: -30px;">
+																			<div class="CodeMirror-linenumber CodeMirror-gutter-elt"
+																				style="left: 0px; width: 21px;">5</div>
+																		</div>
+																		<pre class="CodeMirror-line  prettyprint"
+																			role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 98px;">
+												</div>
+												<div class="CodeMirror-gutters" style="height: 111px;">
+													<div class="CodeMirror-gutter CodeMirror-linenumbers"
+														style="width: 29px;"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5">
+										<textarea placeholder="运行结果……" class="form-control"
+											id="compiler-textarea-result" rows="18">Hello World!</textarea>
+									</div>
+								</div>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./resources/codemirror.min.js"></script>
+		<script src="./resources/clike.js"></script>
+		<!-- <script src="./resources/jquery.min.js"></script> -->
+		<script src="./resources/jquery.min.js"></script>
+		<script src="./resources/clipboard.min.js"></script>
+		<!-- <script src="./resources/bootstrap.min.js"></script> -->
+		<script src="./resources/bootstrap.min.js"></script>
+		<script>
+			var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				matchBrackets: true,
+				mode: "text/x-java",
+				indentUnit: 4,
+				indentWithTabs: true,
+			});
+			btn = $("#submitBTN");
+			editor.on("change", function (editor, change) {
+				btn.prop('disabled', false);
+			});
+			btn.click(function () {
+				btn.prop('disabled', true);
+				loadingdata = '程序正在运行中……';
+				$("#compiler-textarea-result").val(loadingdata);
+
+				code = editor.getValue();
+				//http://localhost:11000/editor/java/compile tomcat配置端口
+				//http://localhost:11001/editor/java/compile 测试端口
+				$.get("http://lezhile.cn/editor/java/compile", { code: code, fileExt: "java" }, function (data) {
+					$("#compiler-textarea-result").val(data.output + data.errors);
+				});
+				setTimeout(function () {
+					btn.prop('disabled', false);
+				}, 3 * 1000);
+			});
+			$("#clearCode").click(function () {
+				var r = confirm("确认清空？");
+				if (r == true) {
+					editor.setValue("");
+					editor.clearHistory();
+					$("#compiler-textarea-result").val("");
+					btn.prop('disabled', true);
+				}
+			});
+
+			$(function () {
+				// bind change event to select
+				$('#sel1').on('change', function () {
+					var url = $(this).val(); // get selected value
+					if (url) { // require a URL
+						window.location = url; // redirect
+					}
+					return false;
+				});
+			});
+
+		</script>
+
+		<div class="col-md-12">
+		</div>
+		<br>
+		<hr>
+	</div>
+
+
+</html>
